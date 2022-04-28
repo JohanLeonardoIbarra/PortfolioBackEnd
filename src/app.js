@@ -1,6 +1,7 @@
 import Express from 'express';
-import { Morgan } from 'morgan';
-
+import Morgan from 'morgan';
+import ProjectsRouter from './routes/projects/projects.js';
+import "dotenv/config";
 
 const app = Express();
 
@@ -11,8 +12,11 @@ app.set("port", process.env.PORT || 3000);
 //Middlewares
 
 app.use(Morgan('dev'));
+app.use(Express.json());
 
 //Routes
+
+app.use("/api/projects", ProjectsRouter)
 
 //Server Init
 
