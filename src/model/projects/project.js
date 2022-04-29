@@ -31,9 +31,7 @@ Project.init({
     }
 }, {
     sequelize: Connection,
-    modelName: 'projects',
-    timestamps: true,
-    createdAt: 'created_at'
+    modelName: 'projects'
 });
 
 export default Project;

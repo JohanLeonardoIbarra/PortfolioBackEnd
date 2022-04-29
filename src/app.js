@@ -16,7 +16,7 @@ app.use(Express.json());
 
 //Routes
 
-app.use("/api/projects", ProjectsRouter)
+app.use("/api", ProjectsRouter)
 
 //Server Init
 
